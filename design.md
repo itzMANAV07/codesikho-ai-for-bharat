@@ -22,29 +22,29 @@ CodeSikho is an AI-powered multilingual learning platform designed to break the 
 ```
 ┌─────────────────────────────────────────────────────────┐
 │                    USER LAYER                           │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐    │
-│  │  Web App    │  │ Mobile PWA  │  │ Native Apps │    │
-│  │  (React)    │  │  (React)    │  │  (Future)   │    │
-│  └─────────────┘  └─────────────┘  └─────────────┘    │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐      │
+│  │  Web App    │  │ Mobile PWA  │  │ Native Apps │      │
+│  │  (React)    │  │  (React)    │  │  (Future)   │      │
+│  └─────────────┘  └─────────────┘  └─────────────┘      │
 └──────────────────────────┬──────────────────────────────┘
                            │ HTTPS/WSS
                            ▼
 ┌─────────────────────────────────────────────────────────┐
 │                  CDN & EDGE LAYER                       │
-│  ┌───────────────────────────────────────────────────┐ │
-│  │ CloudFront CDN | Route 53 | AWS WAF              │ │
-│  └───────────────────────────────────────────────────┘ │
+│  ┌───────────────────────────────────────────────────┐  │
+│  │ CloudFront CDN | Route 53 | AWS WAF               │  │
+│  └───────────────────────────────────────────────────┘  │
 └──────────────────────────┬──────────────────────────────┘
                            │
                            ▼
 ┌─────────────────────────────────────────────────────────┐
 │                  API GATEWAY LAYER                      │
-│  ┌───────────────────────────────────────────────────┐ │
-│  │ API Gateway (REST + WebSocket)                    │ │
-│  │ - Authentication (JWT validation)                 │ │
-│  │ - Rate Limiting (100 req/min free, unlimited pro) │ │
-│  │ - Request Routing                                 │ │
-│  └───────────────────────────────────────────────────┘ │
+│  ┌───────────────────────────────────────────────────┐  │
+│  │ API Gateway (REST + WebSocket)                    │  │
+│  │ - Authentication (JWT validation)                 │  │
+│  │ - Rate Limiting (100 req/min free, unlimited pro) │  │
+│  │ - Request Routing                                 │  │
+│  └───────────────────────────────────────────────────┘  │
 └──────────────────────────┬──────────────────────────────┘
                            │
         ┌──────────────────┼──────────────────┐
@@ -56,7 +56,7 @@ CodeSikho is an AI-powered multilingual learning platform designed to break the 
 │ + Cognito   │    │  + Bedrock  │    │ Sandboxed   │
 │             │    │             │    │  Execution  │
 └─────────────┘    └─────────────┘    └─────────────┘
-                ▼                  ▼                  ▼
+      ▼                  ▼                  ▼
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
 │Voice Service│    │Learning Svc │    │Content Svc  │
 │  (Lambda)   │    │   (ECS)     │    │  (Lambda)   │
@@ -73,7 +73,7 @@ CodeSikho is an AI-powered multilingual learning platform designed to break the 
 │             │    │  Sessions   │    │   Cache     │
 │ User Data   │    │ Real-time   │    │  Hot Data   │
 └─────────────┘    └─────────────┘    └─────────────┘
-                ▼                  ▼
+      ▼                  ▼
 ┌─────────────┐    ┌─────────────┐
 │     S3      │    │ CloudWatch  │
 │             │    │             │
@@ -275,4 +275,5 @@ async def stream_response(prompt, websocket):
 - **Cache Key**: `error:{hash(error_message)}:{language}`
 - **Invalidation**: Manual for outdated explanations
 - **Cost Savings**: 40% reduction in Bedrock API calls
+
 
