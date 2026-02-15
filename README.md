@@ -46,11 +46,11 @@ Market: ₹60,000 crore opportunity
 
 ## Team
 
-Team Lead: [Your Name]
+Team Lead: Manav
 
-Email: [your.email@example.com]
+Email: myself.manav24@gmail.com
 
-LinkedIn: [linkedin.com/in/yourprofile]
+LinkedIn: https://www.linkedin.com/in/manav-476733385/
 
 
 ## Documents
