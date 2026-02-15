@@ -635,10 +635,7 @@ An AI mentor that explains code errors and teaches programming concepts in 7 Ind
 
 ---
 
-Document Version: 1.0  
-Last Updated: February 15, 2026  
-Status: Draft for AI for Bharat Hackathon 2026
-
 **Document Version:** 1.0  
 **Last Updated:** February 15, 2026  
 **Status:** Draft for AI for Bharat Hackathon 2026
+
