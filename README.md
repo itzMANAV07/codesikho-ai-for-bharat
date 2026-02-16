@@ -66,7 +66,4 @@ AI for Bharat Hackathon 2026
 
 Track: AI for Learning & Developer Productivity
 
-Submission Deadline: February 8, 2026
-
-
 Built for Bharat
